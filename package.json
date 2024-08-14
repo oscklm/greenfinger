@@ -1,9 +1,9 @@
 {
   "name": "greenfinger",
-  "main": "expo-router/entry",
+  "main": "index",
   "version": "1.0.0",
   "scripts": {
-    "start": "expo start",
+    "start": "expo start --dev-client",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo run:android",
     "ios": "expo run:ios",
@@ -12,7 +12,8 @@
     "lint": "expo lint"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "setupFiles": ["./jest.setup.js"]
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
