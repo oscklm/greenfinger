@@ -18,3 +18,7 @@ web-build/
 .env.local
 .env.development
 .env.production
+
+# native build folder
+ios/
+android/
