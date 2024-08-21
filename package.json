@@ -18,10 +18,14 @@
     ]
   },
   "dependencies": {
+    "@auth/core": "^0.34.2",
+    "@convex-dev/auth": "^0.0.58",
     "@expo/vector-icons": "^14.0.2",
     "@react-native-community/datetimepicker": "8.0.1",
     "@react-navigation/native": "^6.0.2",
     "@shopify/react-native-skia": "1.2.3",
+    "convex": "^1.14.1",
+    "convex-helpers": "latest",
     "expo": "~51.0.26",
     "expo-camera": "~15.0.14",
     "expo-constants": "~16.0.2",

@@ -1,0 +1,5 @@
+{"userId": "user_1", "name": "Aloe Vera", "imageId": null, "lastWatered": 1692547200, "wateringFrequency": 42, "notes": "Needs watering every 3 weeks."}
+{"userId": "user_2", "name": "Snake Plant", "imageId": null, "lastWatered": 1692364800, "wateringFrequency": 65, "notes": "Thrives on neglect."}
+{"userId": "user_3", "name": "Spider Plant", "imageId": null, "lastWatered": 1692182400, "wateringFrequency": 84, "notes": "Water once a week."}
+{"userId": "user_4", "name": "Peace Lily", "imageId": null, "lastWatered": 1692000000, "wateringFrequency": 127, "notes": "Keep soil moist."}
+{"userId": "user_5", "name": "Fiddle Leaf Fig", "imageId": null, "lastWatered": 1691817600, "wateringFrequency": 16, "notes": "Water when top inch of soil is dry."}
