@@ -1,16 +1,18 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 
 interface WateringFrequencyPickerProps {
   value: number;
+  disableEditing?: boolean;
   onChange?: (value: number) => void;
 }
 
 const daysOfWeek = ["S", "M", "T", "W", "T", "F", "S"];
-const DEBOUNCE_DELAY = 600; // Adjust the delay as needed
+const DEBOUNCE_DELAY = 600;
 
 const WateringFrequencyPicker: React.FC<WateringFrequencyPickerProps> = ({
   value,
+  disableEditing = false,
   onChange,
 }) => {
   const [selectedDays, setSelectedDays] = useState<number>(value);
@@ -50,6 +52,7 @@ const WateringFrequencyPicker: React.FC<WateringFrequencyPickerProps> = ({
       {daysOfWeek.map((day, index) => (
         <Pressable
           key={index}
+          disabled={disableEditing}
           style={[
             styles.dayButton,
             isSelected(index) && styles.selectedDayButton,

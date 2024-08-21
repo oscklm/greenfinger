@@ -14,6 +14,8 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
+import type * as auth from "../auth.js";
+import type * as http from "../http.js";
 import type * as plants_index from "../plants/index.js";
 import type * as plants_mutations_updatePlant from "../plants/mutations/updatePlant.js";
 import type * as plants_queries_getAllPlants from "../plants/queries/getAllPlants.js";
@@ -27,6 +29,8 @@ import type * as plants_queries_getAllPlants from "../plants/queries/getAllPlant
  * ```
  */
 declare const fullApi: ApiFromModules<{
+  auth: typeof auth;
+  http: typeof http;
   "plants/index": typeof plants_index;
   "plants/mutations/updatePlant": typeof plants_mutations_updatePlant;
   "plants/queries/getAllPlants": typeof plants_queries_getAllPlants;
