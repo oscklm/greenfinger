@@ -10,7 +10,11 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "eas-prebuild": "corepack enable && corepack prepare yarn@3.8.4 --activate"
+    "eas-build-pre-install": "echo 'Installing corepack...' && corepack enable && corepack prepare yarn@3.8.4 --activate",
+    "eas-build-post-install": "echo 'post install'",
+    "eas-build-on-success": "echo 'on success'",
+    "eas-build-on-error": "echo 'on error'",
+    "eas-build-on-cancel": "echo 'on cancel'"
   },
   "jest": {
     "preset": "jest-expo",
