@@ -9,7 +9,8 @@
     "ios": "expo run:ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "eas-prebuild": "corepack enable && corepack prepare yarn@3.8.4 --activate"
   },
   "jest": {
     "preset": "jest-expo",
@@ -29,7 +30,9 @@
     "expo": "~51.0.26",
     "expo-camera": "~15.0.14",
     "expo-constants": "~16.0.2",
+    "expo-dev-client": "~4.0.25",
     "expo-font": "~12.0.9",
+    "expo-image-manipulator": "~12.0.5",
     "expo-linking": "~6.3.1",
     "expo-notifications": "~0.28.15",
     "expo-router": "~3.5.21",

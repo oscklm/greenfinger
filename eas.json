@@ -13,7 +13,16 @@
     "preview": {
       "distribution": "internal"
     },
-    "production": {}
+    "production": {
+      "distribution": "store",
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "env": {
+        "EXPO_PUBLIC_CONVEX_URL": "https://quaint-newt-41.convex.cloud",
+        "EXPO_PUBLIC_CONVEX_SITE_URL": "https://quaint-newt-41.convex.site"
+      }
+    }
   },
   "submit": {
     "production": {}
