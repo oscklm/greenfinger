@@ -1,8 +1,10 @@
 import ThemedButton from "@/components/ThemedButton";
 import { ThemedInput } from "@/components/ThemedInput";
 import ThemedToggle from "@/components/ThemedToggle";
+import { useAuth } from "@/hooks/useAuth";
 import { useAuthActions } from "@convex-dev/auth/dist/react";
-import { router } from "expo-router";
+import { Authenticated } from "convex/react";
+import { Redirect } from "expo-router";
 import { useState } from "react";
 import { View } from "react-native";
 import { createStyleSheet, useStyles } from "react-native-unistyles";
@@ -10,29 +12,39 @@ import { createStyleSheet, useStyles } from "react-native-unistyles";
 export default function LoginScreen() {
   const { theme, styles } = useStyles(stylesheet);
 
-  const { signIn } = useAuthActions();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
 
+  const { signIn } = useAuthActions();
+
   const handleSignIn = async () => {
     setIsLoading(true);
-    await signIn("password", { flow: "signIn", email, password });
-    router.back();
+    await signIn("password", {
+      flow: "signIn",
+      email: email.trim(),
+      password: password.trim(),
+    });
     setIsLoading(false);
   };
 
   const handleSignUp = async () => {
     setIsLoading(true);
-    await signIn("password", { flow: "signUp", email, password });
-    router.back();
+    await signIn("password", {
+      flow: "signUp",
+      email: email.trim(),
+      password: password.trim(),
+    });
     setIsLoading(false);
   };
 
   return (
     <View style={styles.container}>
+      <Authenticated>
+        <Redirect href="/(app)/" />
+      </Authenticated>
       <View style={styles.formContainer}>
         <ThemedInput
           placeholder="Email"

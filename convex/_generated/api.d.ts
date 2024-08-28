@@ -16,9 +16,10 @@ import type {
 } from "convex/server";
 import type * as auth from "../auth.js";
 import type * as http from "../http.js";
+import type * as plants_createPlant from "../plants/createPlant.js";
+import type * as plants_getAllPlants from "../plants/getAllPlants.js";
 import type * as plants_index from "../plants/index.js";
-import type * as plants_mutations_updatePlant from "../plants/mutations/updatePlant.js";
-import type * as plants_queries_getAllPlants from "../plants/queries/getAllPlants.js";
+import type * as users_getCurrentUser from "../users/getCurrentUser.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -31,9 +32,10 @@ import type * as plants_queries_getAllPlants from "../plants/queries/getAllPlant
 declare const fullApi: ApiFromModules<{
   auth: typeof auth;
   http: typeof http;
+  "plants/createPlant": typeof plants_createPlant;
+  "plants/getAllPlants": typeof plants_getAllPlants;
   "plants/index": typeof plants_index;
-  "plants/mutations/updatePlant": typeof plants_mutations_updatePlant;
-  "plants/queries/getAllPlants": typeof plants_queries_getAllPlants;
+  "users/getCurrentUser": typeof users_getCurrentUser;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,

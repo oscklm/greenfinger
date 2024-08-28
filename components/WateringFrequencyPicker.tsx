@@ -51,7 +51,7 @@ const WateringFrequencyPicker: React.FC<WateringFrequencyPickerProps> = ({
     <View style={styles.container}>
       {daysOfWeek.map((day, index) => (
         <Pressable
-          key={index}
+          key={`${day}-${index}`}
           disabled={disableEditing}
           style={[
             styles.dayButton,
@@ -70,7 +70,6 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     justifyContent: "space-around",
-    marginVertical: 10,
     gap: 12,
   },
   dayButton: {

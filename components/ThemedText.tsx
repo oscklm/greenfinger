@@ -30,13 +30,20 @@ const stylesheet = createStyleSheet((theme, rt) => ({
           fontWeight: "600",
         },
         title: {
-          fontSize: 32,
-          fontWeight: "bold",
-          lineHeight: 32,
+          fontSize: 24,
+          fontWeight: "800",
+          lineHeight: 26,
         },
         subtitle: {
-          fontSize: 20,
+          fontSize: 16,
+          lineHeight: 20,
+          fontWeight: "600",
+        },
+        formLabel: {
+          fontSize: 16,
           fontWeight: "bold",
+          lineHeight: 20,
+          color: theme.colors.gray$1,
         },
         link: {
           lineHeight: 30,

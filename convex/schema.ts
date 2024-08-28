@@ -4,7 +4,7 @@ import { Plant } from "./plants";
 
 const schema = defineSchema({
   ...authTables,
-  plants: Plant.table,
+  plants: Plant.table.index("by_userId", ["userId"]),
 });
 
 export default schema;
